@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import {Button, TextField, Typography} from "@material-ui/core";
-import { LinearProgress } from '@material-ui/core';
 import RepoCard from "../RepoCard/RepoCard";
 import {useLazyQuery, useMutation} from "@apollo/react-hooks";
 import REPOS_QUERY from "../../models/queries/repos";
@@ -25,10 +24,7 @@ const RepositorySearch = () => {
     return (
         <div className={classes.root}>
             <div>
-                <Typography variant="h5" className={classes.title}>
-                    Поиск репозитория
-                </Typography>
-                <TextField label="Название" variant="outlined" color="default" value={input} onChange={(e) => (setInput(e.target.value))}/>
+                <TextField label="Поиск репозитория" variant="outlined" color="default" value={input} onChange={(e) => (setInput(e.target.value))}/>
                 <br></br>
                 <Button variant="contained" color="default" className={classes.searchButton}
                         onClick={() => (getData({variables: {title: input}}))}>
@@ -37,9 +33,6 @@ const RepositorySearch = () => {
             </div>
             {error && (
                 <h5>Не найдено</h5>
-            )}
-            {loading && (
-                <LinearProgress/>
             )}
             {data && (
                 <div className={classes.cards}>

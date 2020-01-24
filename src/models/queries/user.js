@@ -14,7 +14,7 @@ const GET_USER_INFO = gql`
             location,
             email,
             isViewer,
-            viewerIsFollowing 
+            viewerIsFollowing
         }
     }
 `;

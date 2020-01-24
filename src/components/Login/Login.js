@@ -46,14 +46,12 @@ const Login = ({login}) => {
                     </Typography>
                     <TextField value={input} onChange={(e) => (updateInput(e.target.value))} fullWidth={true}
                                id="standard-basic" label=""/>
-                    {/*Github TOKEN*/}
                     {error && <Typography variant="body2" color="error" component="p">
                         Неверный токен
                     </Typography>}
                 </CardContent>
                 <CardActions>
-                    <Button size="small" color="black" onClick={validation}>
-                        {/*primary*/}
+                    <Button size="small" color="default" onClick={validation}>
                         Войти
                     </Button>
                 </CardActions>

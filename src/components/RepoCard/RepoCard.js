@@ -1,6 +1,6 @@
 import React from 'react';
 import {IconButton, Link} from '@material-ui/core';
-import {Star, StarBorder} from "@material-ui/icons";
+import {Stars, StarBorder} from "@material-ui/icons";
 import useStyles from "./styles";
 import styled from "styled-components";
 
@@ -26,7 +26,7 @@ const RepoCard = ({repo, addStar, removeStar}) => {
                         <StarBorder/>
                     </IconButton> :
                     <IconButton aria-label="previous" onClick={() => (removeStar({variables: {id: repo.id}}))}>
-                        <Star/>
+                        <Stars/>
                     </IconButton>
                 }
             </div>

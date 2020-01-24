@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {Button, CardMedia, CardContent, Typography, Card} from "@material-ui/core";
+import {Button, CardMedia, CardContent, Typography, Card, Avatar} from "@material-ui/core";
 import {useMutation} from "@apollo/react-hooks";
 import FOLLOW_USER from "../../models/mutations/follow";
 import UNFOLLOW_USER from "../../models/mutations/unfollow";
