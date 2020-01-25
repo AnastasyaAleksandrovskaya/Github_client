@@ -3,11 +3,11 @@ import SwipeableViews from 'react-swipeable-views';
 import {useTheme, AppBar, Tabs, Tab, Typography, Box} from '@material-ui/core';
 import SearchUser from "../SearchUser/SearchUser";
 import MyProfile from "../MyProfile/MyProfile";
+import Followers from "../Followers/Followers";
+import Following from "../Followers/Following";
 import RepositorySearch from "../RepositorySearch/RepositorySearch";
 import useStyles from "./styles";
 import GET_USER_INFO from "../../models/queries/user";
-import Followers from "../Followers/Followers";
-import Following from "../Followers/Following";
 
 const TabPanel = ({children, value, index, ...other}) => (
     <Typography
@@ -30,7 +30,7 @@ const a11yProps = (index) => {
     };
 };
 
-export default function FullWidthTabs() {
+export default function FullTabs() {
     const classes = useStyles();
     const theme = useTheme();
     const [position, setPosition]  = useState(0);

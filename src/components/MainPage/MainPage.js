@@ -1,5 +1,5 @@
 import React from "react";
-import FullWidthTabs from "../FullWidthTabs/FullWidthTabs";
+import FullTabs from "../FullTabs/FullTabs";
 import useStyles from "./styles";
 
 const MainPage = () => {
@@ -7,7 +7,7 @@ const MainPage = () => {
     return (
         <div className={classes.mainSection}>
             <div className={classes.content}>
-                <FullWidthTabs/>
+                <FullTabs/>
             </div>
         </div>
 )

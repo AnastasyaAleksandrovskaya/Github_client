@@ -42,18 +42,19 @@ const UserCard = ({data, entity}) => {
                     <Typography variant="body2" component="p">
                         <Icon  className="fa fa-user-circle" aria-hidden="true" />{info.bio}
                     </Typography>
-                    {/*<Typography variant="body2" component="p">*/}
-                        {/*{info.description}*/}
-                    {/*</Typography>*/}
+                    <Typography variant="body2" component="p">
+                        {info.description}
+                    </Typography>
                     <Typography variant="subtitle2" component="h4">
                         <Icon  className="fa fa-handshake-o" aria-hidden="true" />{info.company}
                     </Typography>
-                    {/*<Typography variant="overline" component="h5">*/}
-                        {/*{info.location}*/}
-                    {/*</Typography>*/}
-                    {/*<Typography variant="caption" color="textSecondary" component="h6">*/}
-                        {/*{info.email}*/}
-                    {/*</Typography>*/}
+                    <Typography variant="overline" component="h5">
+                        {info.location}
+                    </Typography>
+                    <Typography variant="caption" color="textSecondary" component="h6">
+                        {info.email}
+                    </Typography>
+
                 </>}
                 <div>
                     <Button className={classes.moreButton} variant="contained" color="default"

@@ -14,7 +14,28 @@ const GET_USER_INFO = gql`
             location,
             email,
             isViewer,
-            viewerIsFollowing
+            viewerIsFollowing,
+            repositories( first: 6) {
+                edges{
+                    node{
+                        id
+                        name
+                        url
+                         owner {
+                          id
+                          login
+                          avatarUrl
+                         }
+                         stargazers {
+                          totalCount
+                         }
+                         viewerHasStarred
+                         watchers {
+                          totalCount
+                         }
+                    }
+                }
+            }
         }
     }
 `;
