@@ -1,8 +1,8 @@
 {
-  "name": "github_client",
+  "name": "Github_client",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github-client-itis.herokuapp.com/",
+  "homepage": "https://GithubClient.kfu.itis.sts.com/",
   "dependencies": {
     "@apollo/react-components": "latest",
     "@material-ui/core": "^4.8.3",
