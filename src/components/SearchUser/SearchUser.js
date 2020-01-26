@@ -6,7 +6,7 @@ import useStyles from "./styles";
 
 const SearchUser = ({query, title, entityName}) => {
     const classes = useStyles();
-    const [getData, {loading, error, data}] = useLazyQuery(query);
+    const [getData, {error, data}] = useLazyQuery(query);
     const [input, setInput] = useState("");
 
     return (
@@ -26,9 +26,11 @@ const SearchUser = ({query, title, entityName}) => {
                 {error && (
                     <h5>Не найдено</h5>
                 )}
+
                 {data && (
                     <UserCard data={data} entity={entityName}/>
                 )}
+
             </Grid>
         </div>
     );

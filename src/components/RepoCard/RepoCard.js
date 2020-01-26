@@ -1,6 +1,6 @@
 import React from 'react';
 import {IconButton, Link} from '@material-ui/core';
-import {Stars, StarBorder} from "@material-ui/icons";
+import {Stars, Star, StarBorder, Visibility} from "@material-ui/icons";
 import useStyles from "./styles";
 import styled from "styled-components";
 
@@ -17,10 +17,14 @@ const RepoCard = ({repo, addStar, removeStar}) => {
                 <FollowersName component="h3" variant="h3">
                     <Link href={repo.url} target="_blank"> {repo.name} </Link>
                     <FollowerLogin>{ repo.owner.login }</FollowerLogin>
+                    {/*<FollowerLogin>*/}
+                        {/*<Star/>{ repo.stargazers.totalCount }*/}
+                    {/*</FollowerLogin>*/}
                 </FollowersName>
                 <FollowerBio>{repo.owner.login && repo.primaryLanguage && repo.primaryLanguage.name} </FollowerBio>
             </ FollowersInfoContainer>
             <div className={classes.controls}>
+                { repo.stargazers.totalCount }
                 {!repo.viewerHasStarred ?
                     <IconButton aria-label="previous" onClick={() => (addStar({variables: {id: repo.id}}))}>
                         <StarBorder/>
@@ -29,7 +33,16 @@ const RepoCard = ({repo, addStar, removeStar}) => {
                         <Stars/>
                     </IconButton>
                 }
+                <FollowerLogin>
+                    {/*<Visibility/>{repo.forkCount}*/}
+                    <Icon className="fa fa-code-fork" aria-hidden="true" />{repo.forkCount}
+                </FollowerLogin>
             </div>
+            {/*<FollowerLogin>*/}
+                {/*<Visibility/>{repo.forkCount}*/}
+                {/*<Icon className="fa fa-code-fork" aria-hidden="true" />{repo.forkCount}*/}
+            {/*</FollowerLogin>*/}
+
             </div>
         </FollowersContainer>
     </FollowersCard>

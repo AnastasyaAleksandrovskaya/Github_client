@@ -16,6 +16,10 @@ const REPOS_QUERY = gql`
                     primaryLanguage {
                         name
                     }
+                    stargazers {
+                        totalCount
+                    },
+                    forkCount
                 }
             }
         }
