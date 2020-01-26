@@ -26,11 +26,9 @@ const SearchUser = ({query, title, entityName}) => {
                 {error && (
                     <h5>Не найдено</h5>
                 )}
-
                 {data && (
                     <UserCard data={data} entity={entityName}/>
                 )}
-
             </Grid>
         </div>
     );

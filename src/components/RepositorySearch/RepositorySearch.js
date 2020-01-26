@@ -10,7 +10,7 @@ import useStyles from "./styles";
 const RepositorySearch = () => {
     const classes = useStyles();
     const [input, setInput] = useState("");
-    const [getData, {loading, error, data}] = useLazyQuery(REPOS_QUERY);
+    const [getData, {error, data}] = useLazyQuery(REPOS_QUERY);
 
     const [addStar] = useMutation(ADD_STAR,
         {
